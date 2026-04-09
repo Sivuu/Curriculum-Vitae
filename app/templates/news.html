@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}News & Technology{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold">Tin tức & Công nghệ</h1>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                Cập nhật những xu hướng mới nhất trong ngành tự động hóa công nghiệp
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- News Card 1 -->
+            <article class="glass rounded-xl overflow-hidden hover:translate-y-[-4px] transition-transform">
+                <div class="h-48 bg-gradient-to-br from-accent/20 to-tech/20 flex items-center justify-center">
+                    <i class="fa fa-android text-5xl text-accent/50"></i>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-tech font-semibold">10 Tháng 4, 2026</span>
+                    <h3 class="text-xl font-bold mt-2">Xu hướng AMR trong nhà máy thông minh 2026</h3>
+                    <p class="text-gray-400 mt-3">Phân tích sự phát triển của robot tự hành và vai trò quan trọng trong hệ thống sản xuất tự động hóa thế hệ mới...</p>
+                    <a href="#" class="mt-4 inline-block text-accent hover:underline">Đọc tiếp →</a>
+                </div>
+            </article>
+
+            <!-- News Card 2 -->
+            <article class="glass rounded-xl overflow-hidden hover:translate-y-[-4px] transition-transform">
+                <div class="h-48 bg-gradient-to-br from-green-500/20 to-accent/20 flex items-center justify-center">
+                    <i class="fa fa-exchange text-5xl text-green-500/50"></i>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-tech font-semibold">05 Tháng 4, 2026</span>
+                    <h3 class="text-xl font-bold mt-2">OPC UA - Giao thức tương lai công nghiệp 4.0</h3>
+                    <p class="text-gray-400 mt-3">Tìm hiểu về tiêu chuẩn truyền thông mở OPC UA và tại sao nó trở thành nền tảng cho mọi hệ thống tự động hóa hiện đại...</p>
+                    <a href="#" class="mt-4 inline-block text-accent hover:underline">Đọc tiếp →</a>
+                </div>
+            </article>
+
+            <!-- News Card 3 -->
+            <article class="glass rounded-xl overflow-hidden hover:translate-y-[-4px] transition-transform">
+                <div class="h-48 bg-gradient-to-br from-orange-500/20 to-tech/20 flex items-center justify-center">
+                    <i class="fa fa-microchip text-5xl text-orange-500/50"></i>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-tech font-semibold">28 Tháng 3, 2026</span>
+                    <h3 class="text-xl font-bold mt-2">PLC thế hệ mới với khả năng AI tích hợp</h3>
+                    <p class="text-gray-400 mt-3">Giới thiệu thế bộ điều khiển lập trình được PLC mới nhất tích hợp khả năng xử lý trí tuệ nhân tạo trên biên...</p>
+                    <a href="#" class="mt-4 inline-block text-accent hover:underline">Đọc tiếp →</a>
+                </div>
+            </article>
+
+            <!-- News Card 4 -->
+            <article class="glass rounded-xl overflow-hidden hover:translate-y-[-4px] transition-transform">
+                <div class="h-48 bg-gradient-to-br from-purple-500/20 to-accent/20 flex items-center justify-center">
+                    <i class="fa fa-rss text-5xl text-purple-500/50"></i>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-tech font-semibold">15 Tháng 3, 2026</span>
+                    <h3 class="text-xl font-bold mt-2">Cảm biến thông minh IIoT thế hệ mới</h3>
+                    <p class="text-gray-400 mt-3">Cảm biến công nghiệp ngày nay không chỉ đo lường mà còn tích hợp xử lý dữ liệu và truyền thông không dây...</p>
+                    <a href="#" class="mt-4 inline-block text-accent hover:underline">Đọc tiếp →</a>
+                </div>
+            </article>
+
+            <!-- News Card 5 -->
+            <article class="glass rounded-xl overflow-hidden hover:translate-y-[-4px] transition-transform">
+                <div class="h-48 bg-gradient-to-br from-tech/20 to-accent/20 flex items-center justify-center">
+                    <i class="fa fa-line-chart text-5xl text-tech/50"></i>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-tech font-semibold">02 Tháng 3, 2026</span>
+                    <h3 class="text-xl font-bold mt-2">Digital Twin trong sản xuất</h3>
+                    <p class="text-gray-400 mt-3">Công nghệ nhân đôi kỹ thuật số giúp mô phỏng và tối ưu hóa quá trình sản xuất trước khi triển khai thực tế...</p>
+                    <a href="#" class="mt-4 inline-block text-accent hover:underline">Đọc tiếp →</a>
+                </div>
+            </article>
+
+            <!-- News Card 6 -->
+            <article class="glass rounded-xl overflow-hidden hover:translate-y-[-4px] transition-transform">
+                <div class="h-48 bg-gradient-to-br from-red-500/20 to-accent/20 flex items-center justify-center">
+                    <i class="fa fa-lock text-5xl text-red-500/50"></i>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-tech font-semibold">20 Tháng 2, 2026</span>
+                    <h3 class="text-xl font-bold mt-2">An ninh mạng trong hệ thống OT</h3>
+                    <p class="text-gray-400 mt-3">Thách thức an ninh mạng cho hệ thống công nghiệp và các giải pháp bảo vệ cơ sở hạ tầng quan trọng...</p>
+                    <a href="#" class="mt-4 inline-block text-accent hover:underline">Đọc tiếp →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Career & Projects{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold">Sự nghiệp & Dự án</h1>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                Quá trình làm việc và các dự án đã thực hiện
+            </p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="relative">
+            <div class="timeline-line"></div>
+
+            <!-- Timeline Items -->
+            <div class="space-y-12">
+                <!-- Company 1 -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2 pr-12 text-right">
+                        <div class="glass p-6 rounded-xl">
+                            <span class="text-accent font-semibold">2023 - Hiện tại</span>
+                            <h3 class="text-xl font-bold mt-2">Automation Engineer</h3>
+                            <p class="text-gray-400 mt-2">Công ty TNHH Tự động hóa Công nghiệp</p>
+                            <div class="mt-4 space-y-2 text-gray-300 text-left">
+                                <p>✅ Thiết kế hệ thống điều khiển tự động hóa dây chuyền sản xuất</p>
+                                <p>✅ Lập trình PLC Siemens S7-1500 & HMI</p>
+                                <p>✅ Tích hợp hệ thống AMR Robot vào dây chuyền</p>
+                                <p>✅ Triển khai giao tiếp OPC UA & MES System</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-primary z-10"></div>
+                    <div class="w-1/2 pl-12"></div>
+                </div>
+
+                <!-- Company 2 -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2 pr-12"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-tech rounded-full border-4 border-primary z-10"></div>
+                    <div class="w-1/2 pl-12">
+                        <div class="glass p-6 rounded-xl">
+                            <span class="text-tech font-semibold">2021 - 2023</span>
+                            <h3 class="text-xl font-bold mt-2">Junior Automation Engineer</h3>
+                            <p class="text-gray-400 mt-2">Tập đoàn Điện tử Việt Nam</p>
+                            <div class="mt-4 space-y-2 text-gray-300">
+                                <p>✅ Bảo trì và nâng cấp hệ thống tự động hóa</p>
+                                <p>✅ Lập trình PLC Mitsubishi & Delta</p>
+                                <p>✅ Thiết kế bảng điện và sơ đồ mạch điện</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Highlight -->
+                <div class="mt-20">
+                    <h2 class="text-3xl font-bold text-center mb-12">Các dự án tiêu biểu</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
+                            <h3 class="text-xl font-semibold mb-2">Hệ thống AMR Logistics</h3>
+                            <p class="text-gray-400 mb-4">Triển khai 12 robot AMR tự động vận chuyển hàng hóa trong nhà máy diện tích 10.000m2</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">MiR Robot</span>
+                                <span class="px-2 py-1 bg-tech/10 text-tech text-xs rounded">Modbus TCP</span>
+                                <span class="px-2 py-1 bg-green-500/10 text-green-500 text-xs rounded">PLC Siemens</span>
+                            </div>
+                        </div>
+
+                        <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
+                            <h3 class="text-xl font-semibold mb-2">Dây chuyền đóng gói tự động</h3>
+                            <p class="text-gray-400 mb-4">Thiết kế và lắp đặt hệ thống tự động hóa dây chuyền đóng gói sản xuất năng suất 6000 sản phẩm/giờ</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">S7-1500</span>
+                                <span class="px-2 py-1 bg-tech/10 text-tech text-xs rounded">Profinet</span>
+                                <span class="px-2 py-1 bg-orange-500/10 text-orange-500 text-xs rounded">SCADA</span>
+                            </div>
+                        </div>
+
+                        <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
+                            <h3 class="text-xl font-semibold mb-2">Hệ thống giám sát nhà máy</h3>
+                            <p class="text-gray-400 mb-4">Xây dựng hệ thống SCADA giám sát toàn bộ nhà máy với hơn 5000 tag dữ liệu thời gian thực</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded">Ignition</span>
+                                <span class="px-2 py-1 bg-tech/10 text-tech text-xs rounded">OPC UA</span>
+                                <span class="px-2 py-1 bg-purple-500/10 text-purple-500 text-xs rounded">MQTT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

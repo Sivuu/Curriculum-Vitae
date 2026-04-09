@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Industrial Automation Engineer Portfolio{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#3b82f6',
+                        tech: '#06b6d4',
+                        dark: '#020617'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            .timeline-line {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+            }
+            .glass {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 text-gradient">
+                        Automation Engineer
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition-colors {% if page == 'home' %}text-accent{% endif %}">Home</a>
+                        <a href="/education" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition-colors {% if page == 'education' %}text-accent{% endif %}">Education</a>
+                        <a href="/career" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition-colors {% if page == 'career' %}text-accent{% endif %}">Career</a>
+                        <a href="/news" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition-colors {% if page == 'news' %}text-accent{% endif %}">News</a>
+                        <a href="/contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-accent transition-colors {% if page == 'contact' %}text-accent{% endif %}">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark mt-20 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2026 Industrial Automation Engineer Portfolio. All rights reserved.</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="#" class="hover:text-accent transition-colors"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                    <a href="#" class="hover:text-accent transition-colors"><i class="fa fa-github"></i> GitHub</a>
+                    <a href="#" class="hover:text-accent transition-colors"><i class="fa fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animations
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-primary/90');
+            } else {
+                nav.classList.remove('bg-primary/90');
+            }
+        });
+    </script>
+</body>
+</html>

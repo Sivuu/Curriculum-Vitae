@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold">Liên hệ</h1>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                Hãy liên hệ nếu bạn có dự án hợp tác, tư vấn hoặc cơ hội việc làm
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-2xl font-bold mb-8">Thông tin liên hệ</h2>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                            <i class="fa fa-envelope text-xl text-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <p class="text-gray-400">engineer@automation.dev</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-tech/10 rounded-lg flex items-center justify-center">
+                            <i class="fa fa-phone text-xl text-tech"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Điện thoại</h4>
+                            <p class="text-gray-400">+84 9XX XXX XXX</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                            <i class="fa fa-map-marker text-xl text-green-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Địa chỉ</h4>
+                            <p class="text-gray-400">TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center">
+                            <i class="fa fa-linkedin text-xl text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">LinkedIn</h4>
+                            <p class="text-gray-400">linkedin.com/in/automation-engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-lg font-semibold mb-4">Kết nối mạng xã hội</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-accent transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-accent transition-colors">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-accent transition-colors">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-lg flex items-center justify-center hover:text-accent transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-bold mb-8">Gửi tin nhắn</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Họ tên</label>
+                        <input type="text" class="w-full px-4 py-3 bg-secondary border border-gray-700 rounded-lg focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 bg-secondary border border-gray-700 rounded-lg focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Chủ đề</label>
+                        <input type="text" class="w-full px-4 py-3 bg-secondary border border-gray-700 rounded-lg focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Nội dung</label>
+                        <textarea rows="5" class="w-full px-4 py-3 bg-secondary border border-gray-700 rounded-lg focus:border-accent focus:outline-none transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-accent to-tech rounded-lg font-medium hover:shadow-lg hover:shadow-accent/20 transition-all">
+                        Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
