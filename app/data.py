@@ -12,14 +12,14 @@ personal_info = {
     "title": "Engineer & Developer",
     "slogan": "Specialist in Robotic AMR, Industrial Sensors, Industrial Communication and PLC Automation",
     "description": "Design, develop and deploy modern automation solutions for Smart Factory 4.0. Focus on building flexible, efficient and intelligent automation systems.",
-    "experience_years": "5+",
+    "experience_years": "10+",
     "projects_done": "20+",
     "technologies": "8+",
     "skills": [
         {
             "icon": "fa-android",
             "color": "accent",
-            "name": "Robotic AMR",
+            "name": "Robotic AMR Systems/ ARM Robot Systems FANUC, Yaskawa.",
             "description": "Design, operation and programming of autonomous mobile robots in factory environments."
         },
         {
@@ -38,7 +38,7 @@ personal_info = {
             "icon": "fa-microchip",
             "color": "orange-500",
             "name": "PLC & HMI",
-            "description": "PLC programming Siemens, Mitsubishi, Omron and HMI interface design."
+            "description": "PLC Programming/Setting JTEKT, Mitsubishi, Omron and HMI."
         }
     ]
 }
@@ -48,37 +48,54 @@ personal_info = {
 # ==============================
 education_timeline = [
     {
-        "year": "2018 - 2023",
+        "year": "2009",
         "color": "accent",
         "side": "left",
-        "title": "Electrical & Electronics Engineer",
-        "organization": "University of Technology",
-        "description": "Major in Automation and Industrial Electrical Engineering. Research on control systems and industrial robots."
+        "title": "Microsoft Certified Systems Administrator (MCSA)",
+        "organization": "MCSA Certification - Microsoft",
+        "description": "Specialized in Windows Server environments and network administration."
     },
     {
-        "year": "2021",
+        "year": "2011",
         "color": "tech",
         "side": "right",
-        "title": "PLC Advanced Certification",
-        "organization": "Siemens Certification",
-        "description": "Advanced level Siemens PLC S7-1200/1500 programming certification. TIA Portal, PROFINET, Safety Integrated."
+        "title": "Cisco Certified Network Associate (CCNA)",
+        "organization": "CISCO Systems",
+        "description": "Specialized in network fundamentals, IP connectivity, and security protocols."
+    },
+    {
+        "year": "2016",
+        "color": "accent",
+        "side": "left",
+        "title": "Barchelor of Information Technology",
+        "organization": "Binh Duong University",
+        "description": "Comprehensive education in IT fundamentals, programming, database management and network administration."
     },
     {
         "year": "2022",
-        "color": "accent",
+        "color": "green-500",
+        "side": "right",
+        "title": "Electric shock prevention (V22 感09254)",
+        "organization": "Toyota Motor Corporation",
+        "description": "Training on electric shock prevention and safety protocols in industrial environments."
+    },
+    {
+        "year": "2022",
+        "color": "green-500",
         "side": "left",
-        "title": "Industrial Robotics Expert",
-        "organization": "ABB Robotics Academy",
-        "description": "Advanced training on programming and integration of ABB, Fanuc, KUKA industrial robots."
+        "title": "Low-voltage electrical work (LE22049)",
+        "organization": "Toyota Motor Corporation",
+        "description": "Certification for performing low-voltage electrical work safely and effectively in industrial settings."
     },
     {
         "year": "2024",
         "color": "green-500",
         "side": "right",
-        "title": "AMR System Integrator",
-        "organization": "Mobile Industrial Robots",
-        "description": "Certification for integration and operation of AMR robotic systems, route programming and MES system interaction."
+        "title": "Working at heights (V24 高12537)",
+        "organization": "Toyota Motor Corporation",
+        "description": "Certification for safely performing work at heights, including fall prevention and rescue procedures in industrial environments."
     }
+
 ]
 
 # ==============================
@@ -86,28 +103,56 @@ education_timeline = [
 # ==============================
 career_timeline = [
     {
-        "year": "2023 - Present",
+        "year": "2012 - 2016",
         "color": "accent",
         "side": "left",
-        "position": "Automation Engineer",
-        "company": "Industrial Automation Co., Ltd.",
+        "position": "IT Helpdesk",
+        "company": "YUENFOONGYU BINH DUONG Co., Ltd.",
         "tasks": [
-            "✅ Design control systems for production line automation",
-            "✅ PLC Siemens S7-1500 & HMI Programming",
-            "✅ AMR Robot system integration into production lines",
-            "✅ OPC UA & MES System communication implementation"
+            "✅ IT system maintenance and support for 80+ employees",
+            "✅ AutoCAD and designing software support for engineering team",
+            "✅ Network setup and troubleshooting for office and factory",
+            "✅ System administration of Windows Server and Linux servers"
         ]
     },
     {
-        "year": "2021 - 2023",
+        "year": "2016 - 2019",
         "color": "tech",
         "side": "right",
-        "position": "Junior Automation Engineer",
-        "company": "Vietnam Electronics Corporation",
+        "position": "IT Helpdesk",
+        "company": "VINASOY BINH DUONG Co., Ltd.",
         "tasks": [
-            "✅ Maintenance and upgrade of automation systems",
-            "✅ Mitsubishi & Delta PLC Programming",
-            "✅ Electrical panel design and circuit diagrams"
+            "✅ IT system maintenance and support for 115+ employees",
+            "✅ PLC setting and support for factory automation systems",
+            "✅ SAP HANA system support for finance and logistics departments",
+            "✅ Networking setup and troubleshooting for office and factory",
+            "✅ Developing a time attendance system using face ID.",
+        ]
+    },
+    {
+        "year": "2019 - 2022",
+        "color": "tech",
+        "side": "left",
+        "position": "Database and Software Engineer",
+        "company": "Expert Software Japan Co., Ltd.",
+        "tasks": [
+            "✅ Developed C# and Python systems for PLC/SCADA data management and sensor reporting",
+            "✅ Engineered internal web systems and managed corporate IT infrastructure.",
+            "✅ Provided technical troubleshooting and maintenance for deployed products at client offices.",
+            "✅ Designed and administered databases for insurance information and policy records."
+        ]
+    },
+    {
+        "year": "2022 - Present",
+        "color": "tech",
+        "side": "right",
+        "position": "Automation Engineer",
+        "company": "LUMI JAPAN Co., Ltd.",
+        "tasks": [
+            "✅ ADAS Validation System Development: Designed a QR-based testing framework for Toyota vehicle performance validation.",
+            "✅ Forklift & AGV Management System: Developed software to manage coordinates, navigation settings, and real-time activity logging.",
+            "✅ IoT & Network Architecture: Engineered real-time synchronization between PLC, PC servers, and WiFi networks.",
+            "✅ Industrial Automation Programming: Created control scripts and vision processing modules using Python, C#, and Rust."
         ]
     }
 ]
@@ -118,18 +163,23 @@ career_timeline = [
 projects = [
     {
         "name": "AMR Logistics System",
-        "description": "Deployment of 12 AMR robots for automated goods transportation in 10,000m2 factory area",
-        "tags": ["MiR Robot", "Modbus TCP", "PLC Siemens"]
+        "description": "Deployment of  AMR robots for automated goods transportation in 10,000m2 factory area",
+        "tags": ["Aichi Kikai AGV", "Ethernet/IP", "Ladder Logic", "PLC Toyopuc"]
     },
     {
-        "name": "Automatic Packaging Line",
-        "description": "Design and installation of automated packaging line with production capacity 6000 products/hour",
-        "tags": ["S7-1500", "Profinet", "SCADA"]
+        "name": "Pallet Recognition System",
+        "description": "Yolov8 and EasyOCR based pallet recognition system for automated inventory management and logistics optimization",
+        "tags": ["iPro Camera", "Yolov8", "Opencv", "Python", "EasyOCR"]
     },
     {
-        "name": "Factory Monitoring System",
-        "description": "Build SCADA system for full factory monitoring with over 5000 real-time data tags",
-        "tags": ["Ignition", "OPC UA", "MQTT"]
+        "name": "Car Alignment Validation System",
+        "description": "QR code based car alignment validation system for ADAS performance testing and validation in automotive industry",
+        "tags": ["Raspberry Pi", "Python", "FastAPI", "OpenCV", "ADAS"]
+    },
+    {
+        "name": "Automated Forklift Management System",
+        "description": "Real-time forklift management system with coordinate tracking, navigation settings and activity logging for optimized warehouse operations",
+        "tags": ["Ubuntu", "Python", "FastAPI", "OpenCV", "LiDAR", "Laser Sensor", "SocketIO"]
     }
 ]
 
@@ -191,8 +241,8 @@ news = [
 # ✅ CONTACT INFORMATION
 # ==============================
 contact_info = {
-    "email": "engineer@automation.dev",
-    "phone": "+84 9XX XXX XXX",
-    "address": "Ho Chi Minh City, Vietnam",
+    "email": "biofan4u@hotmail.com",
+    "phone": "+81 70 4157 8957",
+    "address": "Aichi Prefecture, Japan",
     "linkedin": "linkedin.com/in/automation-engineer"
 }
