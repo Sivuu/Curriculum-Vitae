@@ -3,6 +3,7 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
+from app.data import personal_info, education_timeline, career_timeline, projects, news, contact_info
 
 app = FastAPI(title="Personal Portfolio - Industrial Automation Engineer")
 
@@ -20,7 +21,8 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 async def home(request: Request):
     context = {
         "request": request,
-        "page": "home"
+        "page": "home",
+        "personal": personal_info
     }
     return templates.TemplateResponse("index.html", context)
 
@@ -28,7 +30,8 @@ async def home(request: Request):
 async def education(request: Request):
     context = {
         "request": request,
-        "page": "education"
+        "page": "education",
+        "timeline": education_timeline
     }
     return templates.TemplateResponse("education.html", context)
 
@@ -36,15 +39,18 @@ async def education(request: Request):
 async def career(request: Request):
     context = {
         "request": request,
-        "page": "career"
+        "page": "career",
+        "timeline": career_timeline,
+        "projects": projects
     }
     return templates.TemplateResponse("career.html", context)
 
 @app.get("/news", response_class=HTMLResponse)
-async def news(request: Request):
+async def news_page(request: Request):
     context = {
         "request": request,
-        "page": "news"
+        "page": "news",
+        "news": news
     }
     return templates.TemplateResponse("news.html", context)
 
@@ -52,7 +58,8 @@ async def news(request: Request):
 async def contact(request: Request):
     context = {
         "request": request,
-        "page": "contact"
+        "page": "contact",
+        "contact": contact_info
     }
     return templates.TemplateResponse("contact.html", context)
 

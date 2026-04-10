@@ -6,9 +6,9 @@
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h1 class="text-4xl font-bold">Lịch sử học tập & Bằng cấp</h1>
+            <h1 class="text-4xl font-bold">Education & Certifications</h1>
             <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-                Quá trình học tập và phát triển chuyên môn qua các giai đoạn
+                Academic background and professional development timeline
             </p>
         </div>
 
@@ -18,61 +18,34 @@
 
             <!-- Timeline Items -->
             <div class="space-y-12">
-                <!-- Item 1 -->
+
+                {% for item in timeline %}
                 <div class="relative flex items-center">
+                    {% if item.side == 'left' %}
                     <div class="w-1/2 pr-12 text-right">
                         <div class="glass p-6 rounded-xl">
-                            <span class="text-accent font-semibold">2018 - 2023</span>
-                            <h3 class="text-xl font-bold mt-2">Kỹ sư Điện - Điện tử</h3>
-                            <p class="text-gray-400 mt-2">Trường Đại học Bách Khoa</p>
-                            <p class="text-gray-300 mt-3">Chuyên ngành Tự động hóa và Điện công nghiệp. Nghiên cứu về hệ thống điều khiển và robot công nghiệp.</p>
+                            <span class="text-{{ item.color }} font-semibold">{{ item.year }}</span>
+                            <h3 class="text-xl font-bold mt-2">{{ item.title }}</h3>
+                            <p class="text-gray-400 mt-2">{{ item.organization }}</p>
+                            <p class="text-gray-300 mt-3">{{ item.description }}</p>
                         </div>
                     </div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-primary z-10"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-{{ item.color }} rounded-full border-4 border-primary z-10"></div>
                     <div class="w-1/2 pl-12"></div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="relative flex items-center">
+                    {% else %}
                     <div class="w-1/2 pr-12"></div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-tech rounded-full border-4 border-primary z-10"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-{{ item.color }} rounded-full border-4 border-primary z-10"></div>
                     <div class="w-1/2 pl-12">
                         <div class="glass p-6 rounded-xl">
-                            <span class="text-tech font-semibold">2021</span>
-                            <h3 class="text-xl font-bold mt-2">Chứng chỉ PLC Advanced</h3>
-                            <p class="text-gray-400 mt-2">Siemens Certification</p>
-                            <p class="text-gray-300 mt-3">Chứng chỉ lập trình PLC Siemens S7-1200/1500 cấp độ chuyên gia. TIA Portal, PROFINET, Safety Integrated.</p>
+                            <span class="text-{{ item.color }} font-semibold">{{ item.year }}</span>
+                            <h3 class="text-xl font-bold mt-2">{{ item.title }}</h3>
+                            <p class="text-gray-400 mt-2">{{ item.organization }}</p>
+                            <p class="text-gray-300 mt-3">{{ item.description }}</p>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
-
-                <!-- Item 3 -->
-                <div class="relative flex items-center">
-                    <div class="w-1/2 pr-12 text-right">
-                        <div class="glass p-6 rounded-xl">
-                            <span class="text-accent font-semibold">2022</span>
-                            <h3 class="text-xl font-bold mt-2">Industrial Robotics Expert</h3>
-                            <p class="text-gray-400 mt-2">ABB Robotics Academy</p>
-                            <p class="text-gray-300 mt-3">Đào tạo chuyên sâu về lập trình và tích hợp robot công nghiệp ABB, Fanuc, KUKA.</p>
-                        </div>
-                    </div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-primary z-10"></div>
-                    <div class="w-1/2 pl-12"></div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="relative flex items-center">
-                    <div class="w-1/2 pr-12"></div>
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-primary z-10"></div>
-                    <div class="w-1/2 pl-12">
-                        <div class="glass p-6 rounded-xl">
-                            <span class="text-green-500 font-semibold">2024</span>
-                            <h3 class="text-xl font-bold mt-2">AMR System Integrator</h3>
-                            <p class="text-gray-400 mt-2">Mobile Industrial Robots</p>
-                            <p class="text-gray-300 mt-3">Chứng chỉ tích hợp và vận hành hệ thống robot tự hành AMR, lập trình tuyến đường và tương tác với hệ thống MES.</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
         </div>

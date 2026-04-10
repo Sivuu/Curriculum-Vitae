@@ -14,42 +14,38 @@
             <div>
                 <h1 class="text-[clamp(2.5rem,8vw,4.5rem)] font-bold leading-tight">
                     <span class="block text-gray-100">Industrial Automation</span>
-                    <span class="block bg-gradient-to-r from-accent to-tech text-gradient">Engineer & Developer</span>
+                    <span class="block bg-gradient-to-r from-accent to-tech text-gradient">{{ personal.title }}</span>
                 </h1>
 
                 <p class="mt-6 text-xl text-gray-300 leading-relaxed">
-                    Chuyên gia về <span class="text-tech font-semibold">Robotic AMR</span>,
-                    <span class="text-tech font-semibold">Cảm biến công nghiệp</span>,
-                    <span class="text-tech font-semibold">Giao tiếp công nghiệp</span> và
-                    <span class="text-tech font-semibold">Tự động hóa với PLC</span>
+                    {{ personal.slogan }}
                 </p>
 
                 <p class="mt-4 text-lg text-gray-400">
-                    Thiết kế, phát triển và triển khai các giải pháp tự động hóa hiện đại cho nhà máy thông minh 4.0.
-                    Định hướng xây dựng các hệ thống tự động hóa linh hoạt, hiệu quả và thông minh.
+                    {{ personal.description }}
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-4">
                     <a href="/career" class="px-8 py-3 bg-gradient-to-r from-accent to-tech rounded-lg font-medium hover:shadow-lg hover:shadow-accent/20 transition-all">
-                        Xem dự án
+                        View Projects
                     </a>
                     <a href="/contact" class="px-8 py-3 border border-gray-600 rounded-lg font-medium hover:border-accent hover:text-accent transition-colors">
-                        Liên hệ
+                        Contact Me
                     </a>
                 </div>
 
                 <div class="mt-12 flex flex-wrap gap-8 text-gray-400">
                     <div>
-                        <div class="text-3xl font-bold text-white">5+</div>
-                        <div class="text-sm">Năm kinh nghiệm</div>
+                        <div class="text-3xl font-bold text-white">{{ personal.experience_years }}</div>
+                        <div class="text-sm">Years Experience</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-white">20+</div>
-                        <div class="text-sm">Dự án hoàn thành</div>
+                        <div class="text-3xl font-bold text-white">{{ personal.projects_done }}</div>
+                        <div class="text-sm">Projects Completed</div>
                     </div>
                     <div>
-                        <div class="text-3xl font-bold text-white">8+</div>
-                        <div class="text-sm">Công nghệ chuyên sâu</div>
+                        <div class="text-3xl font-bold text-white">{{ personal.technologies }}</div>
+                        <div class="text-sm">Technical Skills</div>
                     </div>
                 </div>
             </div>
@@ -61,7 +57,7 @@
                         <div class="w-full h-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
                             <div class="text-center">
                                 <i class="fa fa-industry text-8xl text-accent/50"></i>
-                                <p class="mt-4 text-gray-400">Hình ảnh đại diện</p>
+                                <p class="mt-4 text-gray-400">Profile Image</p>
                             </div>
                         </div>
                     </div>
@@ -75,44 +71,22 @@
 <section class="py-20 bg-secondary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold">Chuyên môn chuyên sâu</h2>
+            <h2 class="text-3xl font-bold">Technical Expertise</h2>
             <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-                Những lĩnh vực chuyên môn mà tôi tập trung phát triển và áp dụng trong các dự án thực tế
+                Focused technical areas developed and applied in real industrial projects
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for skill in personal.skills %}
             <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
-                <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa fa-android text-2xl text-accent"></i>
+                <div class="w-12 h-12 bg-{{ skill.color }}/10 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fa {{ skill.icon }} text-2xl text-{{ skill.color }}"></i>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Robotic AMR</h3>
-                <p class="text-gray-400">Thiết kế vận hành và lập trình các robot tự hành di chuyển trong nhà máy.</p>
+                <h3 class="text-xl font-semibold mb-2">{{ skill.name }}</h3>
+                <p class="text-gray-400">{{ skill.description }}</p>
             </div>
-
-            <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
-                <div class="w-12 h-12 bg-tech/10 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa fa-rss text-2xl text-tech"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Cảm biến công nghiệp</h3>
-                <p class="text-gray-400">Tích hợp và xử lý dữ liệu từ các loại cảm biến công nghiệp khác nhau.</p>
-            </div>
-
-            <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
-                <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa fa-exchange text-2xl text-green-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Giao tiếp công nghiệp</h3>
-                <p class="text-gray-400">Profinet, Modbus, OPC UA, EtherNet/IP và các giao thức truyền thông khác.</p>
-            </div>
-
-            <div class="glass p-6 rounded-xl hover:translate-y-[-4px] transition-transform">
-                <div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa fa-microchip text-2xl text-orange-500"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">PLC & HMI</h3>
-                <p class="text-gray-400">Lập trình PLC Siemens, Mitsubishi, Omron và thiết kế giao diện HMI.</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
